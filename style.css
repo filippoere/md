@@ -1,5 +1,5 @@
 body {
-    font-size: 20px;
+    font-size:  16px;
     color: rgba(0, 0, 0, 0.631);
     background-color: bisque
 }
@@ -28,6 +28,14 @@ body {
     padding: 16px;
     padding: 16px 16px;
     padding: 16px 16px 16px 16px;
+}
+
+.info-grid {
+    display: grid;
+    /* Definisce 3 colonne di larghezza uguale (1 frazione di spazio) */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /* Spazio tra le colonne */
+    padding: 20px;
 }
 
 .gallery {
