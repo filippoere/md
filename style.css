@@ -1,73 +1,44 @@
+html {
+        font-size: 16px;
+}
+
 body {
-    font-size:  16px;
-    color: rgba(0, 0, 0, 0.631);
-    background-color: bisque
+    padding: 1rem;
 }
 
-#page {
-    width: 90%;
-    margin-top: 20%;
-    margin-bottom: 0%;
-    margin-left: auto;
-    margin-right: auto;
+ul  {
+    width: 50vw;
+    padding: 0%;
+    list-style-type: none;
 }
 
-#about-me {
-    background-color: hsla(37, 78%, 62%, 0.805)
+.menu {
+    display:flex
 }
 
-#work {
-    background-color: hsla(42, 81%, 67%, 0.818);
+li  {
+    font-size: 1.5rem;
 }
 
-#contatti {
-    background-color: hsl(41, 78%, 61%)
+/* link a riposo*/
+a, a:link {
+    color: hsl(228, 100%, 44%);
+    text-decoration: none
 }
 
-.section {
-    padding: 16px;
-    padding: 16px 16px;
-    padding: 16px 16px 16px 16px;
+/* link visitati*/
+a:visited {
+    color: hsl(97, 100%, 50%)
 }
 
-.info-grid {
-    display: grid;
-    /* Definisce 3 colonne di larghezza uguale (1 frazione di spazio) */
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px; /* Spazio tra le colonne */
-    padding: 20px;
+/* cursore su link o focus su link*/
+a:hover a:focus {
+    color: hsl(240, 100%, 67%)
 }
 
-.gallery {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
+/*link premuti*/
+a:active {
+    color: hsl(308, 100%, 50%)
 }
 
-/* X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap */
 
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
-
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    .gallery {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .gallery figure {
-        width: 30%;
-    }
-}
-
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
-
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {}
