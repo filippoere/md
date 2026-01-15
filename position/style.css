@@ -1,0 +1,196 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#page {
+    background-image: url(images/Sfondo_poster_2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+    z-index: 10;
+}
+
+
+.wrapper-cerchio {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+
+.cerchio-contenitore {
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: #ff8a8a;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+}
+
+.cerchio-contenitore img {
+    width: 20%;
+    height: auto;
+}
+
+.orbita {
+    position: absolute;
+    margin-top: 50%;
+    top: -140px;
+    left: -140px;
+    right: -140px;
+    bottom: -140px;
+    border-radius: 5%;
+    animation: ruota 10s linear;
+    z-index: 2;
+}
+
+.cerchietto {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ff242489;
+    border-radius: 50%;
+}
+
+.cerchietto.uno {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cerchietto.due {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes ruota {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.testo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.testo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 992px) {
+    .wrapper-cerchio {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+.wrapper-cerchio {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.cerchio-contenitore {
+    margin-top: 40%;
+    width: 100%;
+    height: 100%;
+    background-color: #ff8a8a;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+}
+
+.cerchio-contenitore img {
+    width: 50%;
+    height: auto;
+}
+
+.orbita {
+    position: absolute;
+    margin-top: 80%;
+    left: -180px;
+    right: -180px;
+    bottom: -290px;
+    border-radius: 5%;
+    animation: ruota 10s linear infinite;
+    z-index: 2;
+}
+
+.cerchietto {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ff242489;
+}
+
+.cerchietto.uno {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cerchietto.due {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes ruota {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
