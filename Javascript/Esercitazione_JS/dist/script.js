@@ -11,4 +11,4 @@ btn.onclick = function() {
     tween2.start();
     tween3.start();
     tween4.start();
-};
+}
