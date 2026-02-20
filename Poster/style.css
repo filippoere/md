@@ -1,135 +1,168 @@
-html {
-    font-size: 16px;
-    /* 16px = 1rem */
-    min-height: 100vh;
-}
-body{
-    background-color: black;
-    min-height: 100vh;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.testo {
-    font-style: italic;
-    font-size: 17px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+body {
+    font-family: Genova;
+    background-color: #000000;
+    height: 100vh;
+    width: 100vw;
 }
 
-.immagine {
-    align-items: center;
-    display: flex;
+
+.poster-container {
+    background-color: #000000;
     width: 100%;
-    align-items: center;
-    padding: 5%;
-    background-position: center;
-}
-
-.prima {
-    justify-content:center;
-    column-count: 3;
-    column-gap: 10;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    height: 100%;
-}
-
-.titolo {
-    text-align: center;
-    padding: 5%;
-    justify-content: center;
-    align-items: center;
-}
-
- .testo  {
-    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    order: 1;
-    }
-
-
-
-
-
-/* X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap */
-
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
 }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+.poster-image {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
 
-    body {
-        height: 100%;;
-    }
-    .container {
+.poster-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.poster-content {
+    height: 55%;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.artist-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e2b13c;
+    letter-spacing: 1px;
+}
+
+
+.event-title {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #444;
+}
+
+
+.details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detail-item .label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.detail-item .value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+.quote {
+    font-size: 0.65rem;
+    font-style: italic;
+    color: #cccccc;
+    line-height: 1.3;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #333;
+}
+
+.quote-author {
+    display: inline;
+    font-style: normal;
+    color: #e2b13c;
+    font-size: 0.65rem;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .poster-container {
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
     }
 
-    .immagine {
-        width: 50%;
-        display: flex;
-        justify-content: right;
-        flex-direction: row;
-        order: 2;
-        padding: 0;
-    }
 
-    .prima {
-        flex-direction:column-reverse;
-        justify-content: left;
-        column-count: 3;
-        column-gap: 10px;
-    }
-
-    .titolo {
-        text-align: center;
-        padding: 0;
-    }
-
-    .testo  {
-        font-family: ;
+    .poster-image {
         width: 50%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        order: 1;
     }
 
+
+    .poster-content {
+        width: 50%;
+        height: 100%;
+        padding: 60px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .artist-name {
+        font-size: 3.5rem;
+    }
+
+    .event-title {
+        font-size: 1.3rem;
+        padding-bottom: 25px;
+    }
+
+    .details-grid {
+        gap: 25px;
+        margin-top: 0;
+    }
+
+    .detail-item .label {
+        font-size: 0.85rem;
+    }
+
+    .detail-item .value {
+        font-size: 1.4rem;
+    }
+
+    .quote {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        padding-top: 25px;
+        line-height: 1.6;
+    }
+
+    .quote-author {
+        font-size: 1.1rem;
+    }
 }
-
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
-
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {}
-
-/* 
-CLASSI DI SPACING
-
-0.25 rem = 4px
-0.5 rem = 8px
-1 rem = 16px
-1.5 rem = 24px
-2 rem = 32px
-3 rem = 48px 
-*/
 
 
 

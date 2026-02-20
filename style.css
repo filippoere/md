@@ -1,44 +1,137 @@
 html {
-        font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-    padding: 1rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: Tahoma;
+    min-height: 100vh;
 }
 
-ul  {
-    width: 50vw;
-    padding: 0%;
+.container {
+    max-width: 650px;
+    margin: 3rem auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+h2 {
+    color: #718096;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+ul {
+    padding: 0;
     list-style-type: none;
 }
 
-.menu {
-    display:flex
+li {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
 }
 
-li  {
-    font-size: 1.5rem;
+
+a,
+a:link {
+    color: #667eea;
+    text-decoration: none;
+    padding: 1.2rem 1.5rem;
+    display: block;
+    border-radius: 12px;
+    background-color: #f7fafc;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
 }
 
-/* link a riposo*/
-a, a:link {
-    color: hsl(228, 100%, 44%);
-    text-decoration: none
-}
 
-/* link visitati*/
 a:visited {
-    color: hsl(232, 100%, 42%)
+    color: #764ba2;
 }
 
-/* cursore su link o focus su link*/
-a:hover a:focus {
-    color: hsl(240, 100%, 67%)
+
+a:hover,
+a:focus {
+    color: #5a67d8;
+    background-color: white;
+    border: 2px solid #667eea;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
-/*link premuti*/
+
 a:active {
-    color: hsl(308, 100%, 50%)
+    color: #764ba2;
+    transform: scale(0.98);
 }
 
 
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        margin: 1.5rem auto;
+        padding: 2rem 1.5rem;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.3rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+    }
+
+    li {
+        font-size: 1.2rem;
+    }
+
+    a,
+    a:link {
+        padding: 1rem 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    a:hover,
+    a:focus {
+        transform: translateX(5px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 0.85rem;
+    }
+}
