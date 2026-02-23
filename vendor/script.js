@@ -1,13 +1,13 @@
-const startBtn = document.getElementById('startBtn');
-const wrapper = document.querySelector('.wrapper');
-const boxes = document.querySelectorAll('.box');
-const intro = document.querySelector('.intro');
+const startBtn = document.getElementById('startBtn'); //cerca l'elemetno StartBtn in HTML (CLick bottone)
+const wrapper = document.querySelector('.wrapper'); // selezione il primo elemento con classe .wrapper (Cerchi)
+const boxes = document.querySelectorAll('.box'); //seleziona tutti gli elementi con classe .box
+const intro = document.querySelector('.intro'); 
 
-let animationPlayed = false;
-let floatingIntervals = [];
+let animationPlayed = false; //evita che l'animazione parta più volte (un solo click sul bottone e parte)
+
 
 startBtn.addEventListener('click', function() {
-    if (animationPlayed) return;
+    if (animationPlayed) return;  
     
     intro.style.transition = 'all 1s ease';
     intro.style.opacity = '0';

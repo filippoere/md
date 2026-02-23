@@ -24,7 +24,7 @@ body {
     width: 1px;
     height: 1px;
     background: transparent;
-    box-shadow: 
+    box-shadow:
         780px 1456px #fff, 1236px 224px #fff, 1519px 998px #fff,
         345px 876px #fff, 1678px 1345px #fff, 923px 567px #fff,
         234px 1789px #fff, 1890px 456px #fff, 567px 234px #fff,
@@ -45,7 +45,7 @@ body {
     width: 1px;
     height: 1px;
     background: transparent;
-    box-shadow: 
+    box-shadow:
         780px 1456px #fff, 1236px 224px #fff, 1519px 998px #fff,
         345px 876px #fff, 1678px 1345px #fff, 923px 567px #fff,
         234px 1789px #fff, 1890px 456px #fff, 567px 234px #fff,
@@ -65,7 +65,7 @@ body {
     width: 2px;
     height: 2px;
     background: transparent;
-    box-shadow: 
+    box-shadow:
         1345px 678px #fff, 456px 1789px #fff, 1678px 234px #fff,
         890px 1234px #fff, 234px 890px #fff, 1456px 1567px #fff,
         678px 456px #fff, 1890px 1123px #fff, 567px 1345px #fff,
@@ -81,7 +81,7 @@ body {
     width: 2px;
     height: 2px;
     background: transparent;
-    box-shadow: 
+    box-shadow:
         1345px 678px #fff, 456px 1789px #fff, 1678px 234px #fff,
         890px 1234px #fff, 234px 890px #fff, 1456px 1567px #fff,
         678px 456px #fff, 1890px 1123px #fff, 567px 1345px #fff,
@@ -97,7 +97,7 @@ body {
     width: 3px;
     height: 3px;
     background: transparent;
-    box-shadow: 
+    box-shadow:
         1789px 1456px #fff, 234px 567px #fff, 1234px 1890px #fff,
         678px 234px #fff, 1456px 678px #fff, 890px 1567px #fff,
         1567px 345px #fff, 345px 1234px #fff, 567px 1678px #fff,
@@ -106,13 +106,13 @@ body {
 }
 
 .stars3:after {
-    content: " ";
+    
     position: absolute;
     top: 2000px;
     width: 3px;
     height: 3px;
     background: transparent;
-    box-shadow: 
+    box-shadow:
         1789px 1456px #fff, 234px 567px #fff, 1234px 1890px #fff,
         678px 234px #fff, 1456px 678px #fff, 890px 1567px #fff,
         1567px 345px #fff, 345px 1234px #fff, 567px 1678px #fff,
@@ -120,8 +120,13 @@ body {
 }
 
 @keyframes animStar {
-    from { transform: translateY(0px); }
-    to { transform: translateY(-2000px); }
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
 }
 
 .intro {
@@ -133,7 +138,9 @@ body {
 }
 
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
 #mainTitle {
@@ -227,7 +234,7 @@ body {
 .box.shining {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 
+    box-shadow:
         0 0 40px rgba(255, 255, 255, 0.6),
         0 0 80px rgba(255, 255, 255, 0.4),
         inset 0 0 30px rgba(255, 255, 255, 0.2);
@@ -243,11 +250,13 @@ body {
         height: 0;
         opacity: 0;
     }
+
     50% {
         width: 300px;
         height: 300px;
         opacity: 1;
     }
+
     100% {
         width: 400px;
         height: 400px;
@@ -260,19 +269,18 @@ body {
     position: relative;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     #mainTitle {
         font-size: 1.5rem;
         letter-spacing: 5px;
     }
-    
+
     .box {
         width: 100px;
         height: 100px;
         font-size: 11px;
     }
-    
+
     #startBtn {
         padding: 10px 30px;
         font-size: 12px;
