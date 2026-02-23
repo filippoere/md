@@ -1,7 +1,7 @@
 const startBtn = document.getElementById('startBtn'); //cerca l'elemetno StartBtn in HTML (CLick bottone)
 const wrapper = document.querySelector('.wrapper'); // selezione il primo elemento con classe .wrapper (Cerchi)
 const boxes = document.querySelectorAll('.box'); //seleziona tutti gli elementi con classe .box
-const intro = document.querySelector('.intro'); 
+const intro = document.querySelector('.intro'); //Cerca nella pagina l'elemento che ha la classe 'intro' 
 
 let animationPlayed = false; //evita che l'animazione parta più volte (un solo click sul bottone e parte)
 
