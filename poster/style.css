@@ -1,4 +1,3 @@
-
 #page {
     margin: 0;
     padding: 0;
@@ -26,18 +25,21 @@ body {
     width: 100%;
     height: 80%;
     overflow: hidden;
+    /* taglia quello che esce dai bordi del contenitore */
 }
 
 .poster-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* L'immagine si adatta al contenitore, mantiene le proporzioni originali */
 }
 
 
 .poster-content {
     height: 55%;
     padding: 12px 15px;
+    /* per dare respiro tra il bordo e il testo (se ricordo bene) */
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -47,6 +49,7 @@ body {
 .artist-name {
     font-size: 1.3rem;
     font-weight: 700;
+    /* Grassetto intenso per il titolo */
     color: #e2b13c;
     letter-spacing: 1px;
 }
@@ -79,6 +82,7 @@ body {
 .detail-item .label {
     font-size: 1rem;
     text-transform: uppercase;
+    /* Etichette sempre maiuscole */
     color: #888;
     letter-spacing: 1px;
 }
@@ -98,10 +102,11 @@ body {
     margin-top: 8px;
     padding-top: 8px;
     border-top: 1px solid #333;
+    /* Linea grigia che separa la cit dai dettagli */
 }
 
 .quote-author {
-    display: inline;
+    display: inline; /* per forzarlo a non andare a capo */
     font-style: normal;
     color: #e2b13c;
     font-size: 0.65rem;
