@@ -118,18 +118,18 @@ boxes.forEach((box) => { // aggiunge un Listener al click di ognuna delle pallin
         e.stopPropagation(); // blocca la propagazione del clich agli elementi gentori, no effetti indesiderati
 
 
-        box.classList.add('shining');
+        box.classList.add('shining'); // la brillantezza che viene data dop il click (nel CSS si attiva)
 
 
         const pulseTween = KUTE.fromTo(
-            box,
+            box,// Kute.js ingrandisce le palline da 1 a 1.15 quando clicco 
             { scale: 1 },
             { scale: 1.15 },
             {
-                duration: 400,
-                easing: 'easingCubicOut',
-                yoyo: true,
-                repeat: 1
+                duration: 400, // durata 400ms (0,4s) 
+                easing: 'easingCubicOut', // solita decelerazione finale
+                yoyo: true, // l'effetto di scatto che fanno le palline
+                repeat: 1 // un'andata e un ritorno 
             }
         );
 
@@ -138,20 +138,20 @@ boxes.forEach((box) => { // aggiunge un Listener al click di ognuna delle pallin
 
         setTimeout(() => {
             box.classList.remove('shining');
-        }, 800);
+        }, 800); // dopo 800ms (0,8s) rimuove il bagliore dalla pallina 
     });
 });
 
 
-window.addEventListener('resize', () => {
-    if (animationPlayed) {
+window.addEventListener('resize', () => { // capisce quando l'utente sta ridimensionando la finestra 
+    if (animationPlayed) { //esegue il codice solo se le palline sono già apparse 
         boxes.forEach(box => {
             const currentX = parseInt(box.style.left);
             const currentY = parseInt(box.style.top);
-            const maxX = window.innerWidth - 120;
+            const maxX = window.innerWidth - 120; // calcola i nuovi limiti dello schermo
             const maxY = window.innerHeight - 120;
 
-            if (currentX > maxX) box.style.left = maxX + 'px';
+            if (currentX > maxX) box.style.left = maxX + 'px'; //se una pallina è finita fuori dallo schermo dopo il ridimensionamento la riporta dentro
             if (currentY > maxY) box.style.top = maxY + 'px';
         });
     }

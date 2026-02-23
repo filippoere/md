@@ -1,29 +1,47 @@
 * {
     margin: 0;
+    /* elimina margini esterni */
     padding: 0;
+    /* elimina margini interni */
     box-sizing: border-box;
+    /* mantiene fissa la dimensione esterna del contenitore */
 }
+
+/* l'asterisco è un selettore universale tutto ciò che scrivo al suo interno vale per tutta la pagina */
 
 body {
     background: #000000;
     min-height: 100vh;
     display: flex;
+    /* attiva flexbox */
     flex-direction: column;
+    /* titolo e pulsante in colonna */
     align-items: center;
     justify-content: center;
     font-family: 'Inter', sans-serif;
     position: relative;
+    /* il BODY diventa il riferimento per gli elementi con position ABSOLUTE */
     overflow: hidden;
+    /* necessario altrimenti l'animazinoe delle stelle farebbe scorrere */
 }
 
 
 .stars {
     position: absolute;
+    /* le stelle sono fuori dal flusso della pagina */
+
     top: 0;
     left: 0;
+
+    /* partono dall'angolo in alto a sinistra dello schemro */
+
     width: 1px;
     height: 1px;
+
+    /* Ogni gruppo di stelle ha una dimensione diversa, così da creare l'effetto */
+
     background: transparent;
+    /* sfondo trasparente, le stelle in realtà sono le ombre proiettate sullo sfondo nero */
     box-shadow:
         780px 1456px #fff, 1236px 224px #fff, 1519px 998px #fff,
         345px 876px #fff, 1678px 1345px #fff, 923px 567px #fff,
@@ -35,11 +53,15 @@ body {
         456px 678px #fff, 234px 1567px #fff, 1345px 456px #fff,
         1567px 234px #fff, 890px 567px #fff, 234px 1123px #fff,
         1456px 1456px #fff, 678px 890px #fff, 1234px 234px #fff;
+    /* Ogni coppia di valori crea una stella bianca in quella posizione, generata casualmente */
     animation: animStar 100s linear infinite;
+    /* ognuno dei 3 layer scorre a velocità diversa, rende tutto più dinamico (forse) */
 }
 
 .stars:after {
+    /* Crea il Loop continuo */
     content: " ";
+    /* vuoto perchè se scrivessimo "Stella" comparirebbe la scritta stella */
     position: absolute;
     top: 2000px;
     width: 1px;
@@ -106,7 +128,7 @@ body {
 }
 
 .stars3:after {
-    
+
     position: absolute;
     top: 2000px;
     width: 3px;
@@ -120,6 +142,8 @@ body {
 }
 
 @keyframes animStar {
+
+    /* sposta le stelle in modo da farle salire verso l'alto all'infinito */
     from {
         transform: translateY(0px);
     }
@@ -129,11 +153,14 @@ body {
     }
 }
 
+/* sezione Titolo */
 .intro {
     text-align: center;
     margin-bottom: 50px;
     opacity: 0;
+    /* il titolo appare invisibile */
     animation: fadeIn 2s ease-in forwards;
+    /* in due secondi appare */
     z-index: 10;
 }
 
@@ -141,14 +168,19 @@ body {
     to {
         opacity: 1;
     }
+
+    /* semplice animazione che porta l'opacità da 0 a 1 */
 }
 
 #mainTitle {
     font-size: 2rem;
+    /* dimensione titolo 2x16px (base) */
     color: #ffffff;
     font-weight: 300;
+    /* Testo sottile (light) */
     letter-spacing: 8px;
     text-transform: lowercase;
+    /* Testo forzato in minuscolo */
 }
 
 #startBtn {
@@ -157,26 +189,34 @@ body {
     background: transparent;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    /* trasparente */
     border-radius: 30px;
+    /* forma di pillola */
     cursor: pointer;
+    /* icona della mano quando passo sopra */
     margin-bottom: 60px;
     font-weight: 300;
     font-family: 'Inter', sans-serif;
     letter-spacing: 3px;
     text-transform: lowercase;
     transition: all 0.3s ease;
+    /* tutte le proprietà cambiano in 0,3 secondi dal passaggio del mouse sopra (rende più fluido)*/
     opacity: 0;
+    /* all'inizio è invisibile come il titolo */
     animation: fadeIn 2s 0.5s ease-in forwards;
+    /* appare dopo 0,5 secondi di ritardo */
     z-index: 10;
     position: relative;
 }
 
 #startBtn:hover {
+    /* quando passo sopra con il mause il bordo e lo sfondo cambiano */
     border-color: rgba(255, 255, 255, 0.6);
     background: rgba(255, 255, 255, 0.05);
 }
 
 .wrapper {
+    /* contenitore invisibile delle palline */
     opacity: 0;
     position: relative;
     z-index: 5;
@@ -186,10 +226,12 @@ body {
     top: 0;
     left: 0;
     pointer-events: none;
+    /* non intercetta i click, le palline ancora non son cliccabili */
 }
 
 .wrapper.active {
     pointer-events: auto;
+    /* quando JS aggiunge la classe Active, pointer-events torna auto e le palline diventano cliccabili */
 }
 
 .box {
@@ -203,17 +245,22 @@ body {
     font-size: 13px;
     border-radius: 50%;
     position: absolute;
+    /* Ogni pallina si posizione liberamente nella schermata tramite il JS */
     text-align: center;
     cursor: pointer;
+    /* icona della mano quando passo sopra */
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
+    /* fighissimo: sfuma quello che c'è dietro la pallina, liquid glass apple */
     transition: all 0.3s ease;
+    /* tutte le proprietà cambiano in 0,3 secondi dal passaggio del mouse sopra (rende più fluido)*/
     letter-spacing: 2px;
     text-transform: lowercase;
 }
 
 .box:hover {
+    /* animazinoe quando passo sopra la pallina con il mouse */
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.4);
 }
@@ -222,22 +269,28 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    /* shine si posiziona al centro esatto della pallina */
     transform: translate(-50%, -50%);
     width: 0;
     height: 0;
+    opacity: 0;
+    /* inizialmente invisibile */
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
-    opacity: 0;
+    /* sfumatura circolare bianca dal centro e trasparente verso l'esterno */
     pointer-events: none;
+    /* l'animazione non blocca i click dell'utente */
 }
 
 .box.shining {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.9);
     box-shadow:
+        /* i tre livelli dello shining che si vede */
         0 0 40px rgba(255, 255, 255, 0.6),
         0 0 80px rgba(255, 255, 255, 0.4),
         inset 0 0 30px rgba(255, 255, 255, 0.2);
+
 }
 
 .box.shining .shine {
@@ -245,6 +298,8 @@ body {
 }
 
 @keyframes shineEffect {
+
+    /* l'animazione espande il cerchio bianco da 0 a 400 e lo fa sparire effetto onda luminosa */
     0% {
         width: 0;
         height: 0;
@@ -266,10 +321,14 @@ body {
 
 .label {
     z-index: 2;
+    /* la parola nella pallina sta sopra l'effetto shine */
     position: relative;
+    /* fa funzionale lo Z index */
 }
 
 @media (max-width: 600px) {
+
+    /* smartphone */
     #mainTitle {
         font-size: 1.5rem;
         letter-spacing: 5px;
